@@ -66,3 +66,24 @@ Empty cells are a result of no value matching those rows. For this example, ther
 
 ### What plots does the following code make? What does `.` do?
 `.` is just a placeholder and does nothing. 
+
+# 3.6.1
+### What geom would you use to draw a line chart? A boxplot? A histogram? An area chart?
+' ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) + 
+  geom_point() + 
+  geom_smooth(se = FALSE) '
+
+### What does 'show.legend = FALSE do?' What happens if you remove it? Why do you think I used it earlier in the chapter?
+
+### What does the 'se' argument to 'geom_smooth()' do?
+
+### Will these two graphs look different? Why/why not?
+' ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_point() + 
+  geom_smooth()
+
+ggplot() + 
+  geom_point(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+  geom_smooth(data = mpg, mapping = aes(x = displ, y = hwy))
+ '
+### Recreate the R code necessary to generate the following graphs.
