@@ -78,12 +78,12 @@ Empty cells are a result of no value matching those rows. For this example, ther
 ### What does the `se` argument to `geom_smooth()` do?
 
 ### Will these two graphs look different? Why/why not?
-` ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+`ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
   geom_point() + 
   geom_smooth()
 
 ggplot() + 
   geom_point(data = mpg, mapping = aes(x = displ, y = hwy)) + 
-  geom_smooth(data = mpg, mapping = aes(x = displ, y = hwy))
- `
+  geom_smooth(data = mpg, mapping = aes(x = displ, y = hwy))`
+  
 ### Recreate the R code necessary to generate the following graphs.
