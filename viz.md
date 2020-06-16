@@ -85,5 +85,5 @@ Empty cells are a result of no value matching those rows. For this example, ther
 ggplot() + 
   geom_point(data = mpg, mapping = aes(x = displ, y = hwy)) + 
   geom_smooth(data = mpg, mapping = aes(x = displ, y = hwy))`
-  
+ 
 ### Recreate the R code necessary to generate the following graphs.
