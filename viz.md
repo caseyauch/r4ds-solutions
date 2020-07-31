@@ -78,15 +78,17 @@ It hides the legend, and if removed, the legend is shown on the right. In the ex
 `se = TRUE` displays the confidence interval, or the shadow-like figure on a plot. 
 
 ### Will these two graphs look different? Why/why not?
-```ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
+```
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
   geom_point() + 
   geom_smooth()
 
 ggplot() + 
   geom_point(data = mpg, mapping = aes(x = displ, y = hwy)) + 
-  geom_smooth(data = mpg, mapping = aes(x = displ, y = hwy))```
- 
- No, they will look the same. V1 is just a more concise way of writing the code. 
+  geom_smooth(data = mpg, mapping = aes(x = displ, y = hwy))
+ ```
+No, they will look the same. V1 is just a more concise way of writing the code. 
+
 ### Recreate the R code necessary to generate the following graphs.
 1. `ggplot (data = mpg, mapping = aes(x = displ, y = hwy)) + geom_point() + geom_smooth(se = FALSE)`
 2. `ggplot (data = mpg, mapping = aes(x = displ, y = hwy, group = drv)) + geom_point() + geom_smooth(se = FALSE)`
