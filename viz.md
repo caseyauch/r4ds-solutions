@@ -69,13 +69,13 @@ Empty cells are a result of no value matching those rows. For this example, ther
 
 # 3.6.1
 ### What geom would you use to draw a line chart? A boxplot? A histogram? An area chart?
-`ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) + 
-  geom_point() + 
-  geom_smooth(se = FALSE)`
+geom_smooth() = line chart,geom_boxplot() = box plot, geom_histogram() = histogram, geom_area() = area
 
-### What does `show.legend = FALSE do?` What happens if you remove it? Why do you think I used it earlier in the chapter?
+### What does `show.legend = FALS` do? What happens if you remove it? Why do you think I used it earlier in the chapter?
+It hides the legend, and if removed, the legend is shown on the right. In the example where `show.legend = FALSE` is used earlier in the chpater, the author removed the legend to match the other 2 plots.
 
 ### What does the `se` argument to `geom_smooth()` do?
+`se = TRUE` displays the confidence interval, or the shadow-like figure on a plot. 
 
 ### Will these two graphs look different? Why/why not?
 `ggplot(data = mpg, mapping = aes(x = displ, y = hwy)) + 
@@ -86,4 +86,11 @@ ggplot() +
   geom_point(data = mpg, mapping = aes(x = displ, y = hwy)) + 
   geom_smooth(data = mpg, mapping = aes(x = displ, y = hwy))`
  
+ No, they will look the same. V1 is just a more concise way of writing the code. 
 ### Recreate the R code necessary to generate the following graphs.
+1. `ggplot (data = mpg, mapping = aes(x = displ, y = hwy)) + geom_point() + geom_smooth(se = FALSE)`
+2. `ggplot (data = mpg, mapping = aes(x = displ, y = hwy, group = drv)) + geom_point() + geom_smooth(se = FALSE)`
+3. `ggplot (data = mpg, mapping = aes(x = displ, y = hwy, color = drv)) + geom_point() + geom_smooth(se = FALSE)`
+4. `ggplot (data = mpg, mapping = aes(x = displ, y = hwy)) + geom_point(mapping = aes(color = drv)) + geom_smooth(se = FALSE)`
+5. `ggplot (data = mpg, mapping = aes(x = displ, y = hwy)) + geom_point(mapping = aes(color = drv)) + geom_smooth(mapping = aes (linetype = drv), se = FALSE)`
+6. 
