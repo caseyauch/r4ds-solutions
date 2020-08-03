@@ -96,3 +96,31 @@ No, they will look the same. V1 is just a more concise way of writing the code.
 4. `ggplot (data = mpg, mapping = aes(x = displ, y = hwy)) + geom_point(mapping = aes(color = drv)) + geom_smooth(se = FALSE)`
 5. `ggplot (data = mpg, mapping = aes(x = displ, y = hwy)) + geom_point(mapping = aes(color = drv)) + geom_smooth(mapping = aes (linetype = drv), se = FALSE)`
 6. 
+
+# 3.7.1
+### What is the default geom associated with `stat_summary()`? How could you rewrite the previous plot to use that geom function instead of the stat function?
+
+### What does `geom_col()` do? How is it different to `geom_bar()`?
+
+### Most geoms and stats come in pairs that are almost always used in concert. Read through the documentation and make a list of all the pairs. What do they have in common?
+
+### What variables does `stat_smooth()` compute? What parameters control its behaviour?
+
+### In our proportion bar chart, we need to set group = 1. Why? In other words what is the problem with these two graphs?
+```
+ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, y = ..prop..))
+ggplot(data = diamonds) + 
+  geom_bar(mapping = aes(x = cut, fill = color, y = ..prop..))
+  ```
+# 3.8.1
+### What is the problem with this plot? How could you improve it?
+```
+ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) + 
+  geom_point()
+  ```
+### What parameters to `geom_jitter()` control the amount of jittering?
+
+### Compare and contrast `geom_jitter()` with `geom_count()`.
+
+### What’s the default position adjustment for `geom_boxplot()`? Create a visualisation of the mpg dataset that demonstrates it.
