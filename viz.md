@@ -104,7 +104,7 @@ Using the geoms cheat sheet it looks `stat_summary()` looks a lot like `geom_poi
 ```ggplot(data = diamonds, mapping = aes(x = cut, y = depth)) +
      geom_line() +
      stat_summary(fun.y = "median", geom = "point", size = 3)
-     ```
+```
 ### What does `geom_col()` do? How is it different to `geom_bar()`?
 
 ### Most geoms and stats come in pairs that are almost always used in concert. Read through the documentation and make a list of all the pairs. What do they have in common?
