@@ -99,7 +99,7 @@ No, they will look the same. V1 is just a more concise way of writing the code.
 
 # 3.7.1
 ### What is the default geom associated with `stat_summary()`? How could you rewrite the previous plot to use that geom function instead of the stat function?
-Using the geoms cheat sheet it looks `stat_summary()` looks a lot like `geom_pointrange` but after some trial/error, geom_pointrange doesn't automate the ymax and ymin values like `stat_summary()`. Using  `geom_line()` and `stat_summary()` seems to work.
+Using the [geoms cheat sheet](https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf) it looks `stat_summary()` looks a lot like `geom_pointrange` but after some trial/error, geom_pointrange doesn't automate the ymax and ymin values like `stat_summary()`. Using  `geom_line()` and `stat_summary()` seems to work.
 
 ```ggplot(data = diamonds, mapping = aes(x = cut, y = depth)) +
      geom_line() +
